@@ -1,0 +1,265 @@
+/* Mobile marketing screens are intentionally isolated from desktop layout. */
+@media (max-width: 767px) {
+  html, body { width: 100%; overflow-x: hidden; }
+  .cp-grid-background { z-index: 0; }
+  .cp-mobile-navbar-shell {
+    position: relative;
+    z-index: 20;
+    padding-top: 74px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .cp-mobile-navbar {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cp-color-primary);
+    padding: 9px 30px;
+  }
+  .cp-mobile-navbar img { width: 44px; height: 30px; object-fit: contain; }
+
+  .cp-mobile-home {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 1800px;
+    padding: 0 16px 40px;
+    background: transparent;
+  }
+  .cp-mobile-topbar { display: none; }
+
+  .cp-mobile-hero {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    margin-top: 32px;
+    height: 401px;
+  }
+  .cp-mobile-hero-card {
+    position: relative;
+    width: calc(100% - 68px);
+    height: 401px;
+    overflow: hidden;
+    border: 2px solid var(--cp-color-primary);
+    box-shadow: 4px 4px 0 #000;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+  }
+  .cp-mobile-hero-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 9, 38, .72), rgba(0, 9, 38, 0) 45%);
+    pointer-events: none;
+  }
+  .cp-mobile-hero-caption {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: #fbfbfb;
+    font-family: var(--cp-font-body);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.84px;
+  }
+  .cp-mobile-dash {
+    width: 32px;
+    height: 10px;
+    background: var(--cp-color-accent);
+    border: 2px solid var(--cp-color-primary);
+    transform: skewX(-28deg);
+    flex: 0 0 auto;
+  }
+  .cp-mobile-hero-label {
+    width: 52px;
+    border: 2px solid var(--cp-color-primary);
+    box-shadow: 4px 4px 0 #000;
+    background: #fff;
+    color: var(--cp-color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 10px;
+    font-family: var(--cp-font-display);
+    font-size: 48px;
+    line-height: 1.08;
+    letter-spacing: -1.44px;
+  }
+
+  .cp-mobile-join-card {
+    height: 145px;
+    width: 100%;
+    margin-top: 25px;
+    border: 2px solid var(--cp-color-primary);
+    box-shadow: 4px 4px 0 #000;
+    background: #2bbcff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px;
+    color: #fbfbfb;
+    font-family: var(--cp-font-body);
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .cp-mobile-join-arrow { font-size: 32px; color: var(--cp-color-primary); }
+
+  .cp-mobile-circle-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 25px;
+  }
+  .cp-mobile-circle-nav button {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--cp-color-primary);
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 2px 2px 0 #000;
+    color: var(--cp-color-primary);
+    font: 400 30px/1 var(--cp-font-body);
+  }
+
+  .cp-mobile-bottom-nav {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 69px;
+    width: max-content;
+    margin: 35px auto 0;
+    padding: 11px 23px;
+    border: 2px solid var(--cp-color-primary);
+    box-shadow: 6px 6px 0 #000;
+    background: #fbfbfb;
+  }
+  .cp-mobile-bottom-nav a {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    color: var(--cp-color-primary);
+    font: 400 30px/1 var(--cp-font-body);
+  }
+
+  .cp-mobile-community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 84px;
+    width: 100%;
+  }
+  .cp-mobile-section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    color: var(--cp-color-primary);
+  }
+  .cp-mobile-section-heading h2 {
+    margin: 0;
+    font: 700 56px/1 var(--cp-font-display);
+    letter-spacing: -1.68px;
+  }
+  .cp-mobile-section-heading p {
+    margin: 0;
+    font: 500 24px/1.25 var(--cp-font-body);
+  }
+
+  .cp-mobile-subscribe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 30px;
+    border: 5px solid #000;
+    box-shadow: 10px 10px 0 #000;
+    background: #44a4fb;
+  }
+  .cp-mobile-subscribe label {
+    color: var(--cp-color-primary);
+    font: 400 24px/1.25 var(--cp-font-body);
+  }
+  .cp-mobile-subscribe input {
+    width: 100%;
+    height: 50px;
+    border: 3px solid #000;
+    background: #fff;
+    box-shadow: 5px 5px 0 #000;
+    outline: none;
+  }
+  .cp-mobile-subscribe button {
+    align-self: flex-start;
+    padding: 10px;
+    border: 2px solid #000;
+    background: #fff;
+    box-shadow: 5px 5px 0 #000;
+    color: #000;
+    font: 400 24px/1.25 var(--cp-font-body);
+  }
+
+  .cp-mobile-social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 116.5px);
+    gap: 20px;
+    justify-content: center;
+  }
+  .cp-mobile-social-grid a {
+    width: 116.5px;
+    height: 116.5px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #000;
+    background: #fff;
+    box-shadow: 5px 5px 0 #000;
+    color: #000926;
+    font: 700 42px/1 var(--cp-font-body);
+  }
+
+  .cp-mobile-email-us {
+    width: 100%;
+    margin-top: 50px;
+    padding: 40px 30px;
+    border: 5px solid #000;
+    box-shadow: 10px 10px 0 #000;
+    background: #2bbcff;
+  }
+  .cp-mobile-email-us > div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 10px;
+  }
+  .cp-mobile-email-us h2 {
+    margin: 0;
+    color: var(--cp-color-primary);
+    font: 700 32px/1.25 var(--cp-font-body);
+  }
+  .cp-mobile-email-us p {
+    margin: 0;
+    padding: 10px;
+    border: 2px solid #000;
+    background: #fff;
+    box-shadow: 5px 5px 0 #000;
+    color: #000;
+    font: 400 20px/1.25 var(--cp-font-body);
+  }
+}
+
+@media (min-width: 768px) {
+  .cp-mobile-home, .cp-mobile-navbar-shell { display: none !important; }
+}
