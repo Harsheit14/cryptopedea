@@ -1,21 +1,19 @@
 import Image from "next/image";
 
+const FIGMA_LOGO =
+  "https://www.figma.com/api/mcp/asset/287e1d5f-8c45-4898-a680-56df84efbc84/077fd.svg";
+
 export default function MobileNavbar() {
   return (
     <header className="mobile-navbar">
       <div className="mobile-navbar__bar">
         <Image
-          src="/brand/cp-logo.svg"
+          src={FIGMA_LOGO}
           alt="CryptoPedea"
-          width={44}
+          width={44.203}
           height={30}
           priority
         />
-        <button type="button" className="mobile-navbar__menu" aria-label="Open menu">
-          <span />
-          <span />
-          <span />
-        </button>
       </div>
     </header>
   );
