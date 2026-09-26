@@ -1,45 +1,20 @@
-import Link from "next/link";
+const FIGMA_ASSETS =
+  "https://www.figma.com/api/mcp/asset/c58ba1cc-997c-4494-826f-8f51d94721dc";
 
-function NetworkIcon() {
-  return (
-    <svg viewBox="0 0 36 36" aria-hidden="true">
-      <circle cx="18" cy="7" r="3.2" fill="none" stroke="currentColor" strokeWidth="2" />
-      <circle cx="8" cy="27" r="3.2" fill="none" stroke="currentColor" strokeWidth="2" />
-      <circle cx="28" cy="27" r="3.2" fill="none" stroke="currentColor" strokeWidth="2" />
-      <path d="M16.2 9.8 9.8 24.2M19.8 9.8l6.4 14.4M11.3 27h13.4" fill="none" stroke="currentColor" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function PlayIcon() {
-  return (
-    <svg viewBox="0 0 36 36" aria-hidden="true">
-      <path d="M12 8v20l16-10z" fill="currentColor" />
-    </svg>
-  );
-}
-
-function ArticlesIcon() {
-  return (
-    <svg viewBox="0 0 36 36" aria-hidden="true">
-      <rect x="7" y="6" width="22" height="24" fill="none" stroke="currentColor" strokeWidth="2.5" />
-      <path d="M12 12h12M12 18h12M12 24h8" fill="none" stroke="currentColor" strokeWidth="2.5" />
-    </svg>
-  );
-}
+const ITEMS = [
+  `${FIGMA_ASSETS}/c6d3d.svg`,
+  `${FIGMA_ASSETS}/980b9.svg`,
+  `${FIGMA_ASSETS}/ce408.svg`,
+];
 
 export default function BottomNav() {
   return (
     <nav className="mobile-bottom-nav" aria-label="Mobile navigation">
-      <Link href="/learn" aria-label="Explore">
-        <NetworkIcon />
-      </Link>
-      <Link href="/learn" aria-label="Learn">
-        <PlayIcon />
-      </Link>
-      <Link href="/blogs" aria-label="Blogs">
-        <ArticlesIcon />
-      </Link>
+      {ITEMS.map((src) => (
+        <button type="button" key={src} aria-label="Navigate">
+          <img src={src} alt="" />
+        </button>
+      ))}
     </nav>
   );
 }
