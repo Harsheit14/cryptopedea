@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const FIGMA_ASSETS =
@@ -6,33 +5,11 @@ const FIGMA_ASSETS =
 
 export default function JoinNowCard() {
   return (
-    <Link
-      href="/login"
-      className="mobile-hero__join"
-      aria-label="Join CryptoPedea now"
-    >
-      <Image
-        src={`${FIGMA_ASSETS}/6c7c0.png`}
-        alt=""
-        fill
-        sizes="408px"
-        className="mobile-hero__join-background"
-      />
-      <Image
-        src={`${FIGMA_ASSETS}/ffe47.png`}
-        alt=""
-        fill
-        sizes="408px"
-        className="mobile-hero__join-overlay"
-      />
+    <Link href="/login" className="mobile-hero__join" aria-label="Join CryptoPedea now">
+      <img src={`${FIGMA_ASSETS}/6c7c0.png`} alt="" className="mobile-hero__join-background" />
+      <img src={`${FIGMA_ASSETS}/ffe47.png`} alt="" className="mobile-hero__join-overlay" />
       <span className="mobile-hero__join-label">Join Now</span>
-      <Image
-        src={`${FIGMA_ASSETS}/36078.svg`}
-        alt=""
-        width={30}
-        height={30}
-        aria-hidden="true"
-      />
+      <img src={`${FIGMA_ASSETS}/36078.svg`} alt="" aria-hidden="true" className="mobile-hero__join-arrow" />
     </Link>
   );
 }
