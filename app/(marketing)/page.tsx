@@ -1,4 +1,4 @@
-import MobileHome from "@/components/marketing/mobile-home";
+import MobileHome from "@/components/marketing/mobile/home/mobile-home";
 import Hero from "@/components/marketing/hero";
 import WhatWeOffer from "@/components/marketing/what-we-offer";
 import JoinAcademy from "@/components/marketing/join-academy";
@@ -13,7 +13,9 @@ export default function Home() {
         <JoinAcademy />
         <Community />
       </main>
-      <MobileHome />
+      <div className="md:hidden">
+        <MobileHome />
+      </div>
     </>
   );
 }
